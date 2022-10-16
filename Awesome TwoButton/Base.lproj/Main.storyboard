@@ -25,27 +25,39 @@
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDI-fc-C0N">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDI-fc-C0N">
                                 <rect key="frame" x="150" y="207" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="+1"/>
+                                <connections>
+                                    <action selector="addOneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x2A-9C-Tec"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOW-dX-ASE">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOW-dX-ASE">
                                 <rect key="frame" x="165" y="292" width="45" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="+2"/>
+                                <connections>
+                                    <action selector="addTwoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dlx-Xk-Ur9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="KDI-fc-C0N" firstAttribute="centerX" secondItem="qx3-ZF-h8b" secondAttribute="centerX" id="5DG-bV-3hf"/>
                             <constraint firstItem="AOW-dX-ASE" firstAttribute="top" secondItem="KDI-fc-C0N" secondAttribute="bottom" constant="50" id="GUy-1d-Ppd"/>
+                            <constraint firstItem="KDI-fc-C0N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="HNC-0h-Pwz"/>
+                            <constraint firstItem="KDI-fc-C0N" firstAttribute="centerX" secondItem="AOW-dX-ASE" secondAttribute="centerX" id="JUD-LA-b6M"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qx3-ZF-h8b" secondAttribute="trailing" constant="10" id="MD0-qH-8LN"/>
                             <constraint firstItem="qx3-ZF-h8b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="bPf-ra-kzR"/>
                             <constraint firstItem="KDI-fc-C0N" firstAttribute="top" secondItem="qx3-ZF-h8b" secondAttribute="bottom" constant="50" id="j4T-f3-u7A"/>
                             <constraint firstItem="qx3-ZF-h8b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="nWh-rT-y8d"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="qx3-ZF-h8b" id="KIf-bJ-X95"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
